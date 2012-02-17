@@ -9,15 +9,35 @@ title: Contribute
   / version control
   %h2{:class=>"secheader"}= "version control"
 
-  %p= "Get the source code on your local drive using SVN. Most development is done on the trunk:"
+  %p= "S4 sources are available through <b>git</b>. Most development is done on the dev and piper branches:"
+  %ul
+    %li
+      <b>dev</b> branch contains the code for S4 0.4, which is an evolution of 0.3 with checkpointing + bugfixes. We still have a few things to add for checkpointing (taking into account feedback we got) as well as some documentation
+    %li
+      <b>piper</b> branch contains the code for s4-piper
+  %ul
+  
+  %p= "See a summary <a href='https://git-wip-us.apache.org/repos/asf?p=incubator-s4.git;a=summary'>here.</a>"
 
-  %p= "<span class='high'>svn checkout https://svn.apache.org/repos/asf/incubator/s4</span>"
 
-  %p= "To create an Eclipse project type <span class='high'>gradlew eclipse</span>. You can now import the project into Eclipse. To learn more, visit the <b><a href='http://www.gradle.org'>Gradle website</a></b>."
+  / access to the repository
+  %h2{:class=>"secheader"}= "access to the repository"
+  %ul
+    %li= "as a committer: <pre>git clone https://user_name@git-wip-us.apache.org/repos/asf/incubator-s4.git</pre>"
+    %li= "as a user or contributor: <pre>git clone http://git-wip-us.apache.org/repos/asf/incubator-s4.git</pre>"
+  %ul
 
-  %p= "You may also want to develop against a specific release. To do so, use a <b><a href='https://svn.apache.org/repos/asf/incubator/s4/tags'>release branch</a></b> and find the release that you are interested in developing against. To checkout this release, run:"
+  %p= "For more information, have a look there: <a href='https://git-wip-us.apache.org/'>https://git-wip-us.apache.org/</a>"
 
-  %p="<span class='high'>svn checkout https://svn.apache.org/repos/asf/incubator/s4/tags/release-X.Y.Z/ s4-X.Y.Z</span>"
+  %i 
+  <i>Note: For the moment, you'll probably get this warning: "remote HEAD refers to nonexistent ref, unable to checkout." 
+  </br>This is because there is no branch named "master" for the moment.
+  </br><b>Don't panic!</b> Simply do "git checkout dev" or "git checkout piper" to get one of the available branches.</i>
+  
+
+  / eclipse project
+  %h2{:class=>"secheader"}= "creating an eclipse project"
+  %p= "type: <pre>gradlew eclipse</pre> You can now import the project into Eclipse. To learn more, visit the <b><a href='http://www.gradle.org'>Gradle website</a></b>."
 
   / submission guidelines
   %h2{:class=>"secheader"}= "submission guidelines"
