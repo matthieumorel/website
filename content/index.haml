@@ -5,12 +5,12 @@ title: Distributed Stream Computing Platform
   #about{:class=>"span-18 last"}
 
     #notice{:class=>"span-17 last"}
-      #notice_text{:class=>"span-11"}= "We are currently working on a new release, with a new design and architecture. Please refer to the <a href='https://cwiki.apache.org/confluence/display/S4/S4+Wiki'>wiki</a> and the <a href='https://issues.apache.org/jira/browse/S4'> jira tracker</a> for the latest documentation and updates."
-      #notice_image{:class=>"span-6 last"}
-        %a{:href=>"http://incubator.apache.org/projects/s4.html"}
-          %img{:src=>"http://incubator.apache.org/images/apache-incubator-logo.png"}
+      #notice_text= "August 2012: <b>S4 0.5.0 has been released!</b> Get it <a href='/download'>here</a>!."
+    
+    #notice{:class=>"span-17 last"}
+      #notice_text= "S4 0.5.0 \"Piper\" is a complete refactoring of the previous version of S4. It provides a clearer API and a more robust implementation. It features TCP based communications, state recovery, and a new set of tools. More information is available in an <a href='https://cwiki.apache.org/confluence/display/S4/S4+0.5.0+Overview'>overview</a> and you may also check the <a href='http://www.apache.org/dist/incubator/s4/s4-0.5.0-incubating/RELEASE_NOTES.html'>release notes</a>."
         
-    %p{:class=>'large'}= "S4 is a <span class='high'>general-purpose</span>, <span class='high'>distributed</span>, <span class='high'>scalable</span>, partially <span class='high'>fault-tolerant</span>, <span class='high'>pluggable</span> platform that allows programmers to easily develop applications for processing continuous unbounded streams of data."
+    %p{:class=>'large'}= "S4 is a <span class='high'>general-purpose</span>, <span class='high'>distributed</span>, <span class='high'>scalable</span>, <span class='high'>fault-tolerant</span>, <span class='high'>pluggable</span> platform that allows programmers to easily develop applications for processing continuous unbounded streams of data."
 
     .horrule
 
@@ -19,16 +19,16 @@ title: Distributed Stream Computing Platform
       %p= "S4 fills the gap between complex proprietary systems and batch-oriented open source computing platforms. We aim to develop a high performance computing platform that hides the complexity inherent in parallel processing system from the application programmer."
     #sec_implementation{:class=>"span-9 last"}
       %h2{:class=>"secheader"}= "implementation"
-      %p= "The core platform is written in <span class='high'>Java</span>. The drivers to read from and write to the platform can be implemented in any language making it possible to integrate with legacy data sources and systems."
+      %p= "The core platform is written in <span class='high'>Java</span>. The implementation is modular and pluggable, and S4 applications can be easily and dynamically combined for creating more sophisticated stream processing systems."
 
     .horrule
     
     #sec_osi{:class=>"span-18 last"}
       %h2{:class=>"secheader"}= "open source"
       #os_logo{:class=>"span-2"}
-        %img{:src=>"images/osi.png", :width=>'75', :height=>'88'}
+        %img{:src=>"http://incubator.apache.org/images/apache-incubator-logo.png"}
       #os_desc{:class=>"span-14 last"}
-        %p{:style=>"padding-top:10px; padding-left:10px;"}= "S4 was released by Yahoo! Inc. in October 2010 under the Open Source Apache 2.0 license, which allows the user of the software the freedom to use the software for any purpose, to distribute it, to modify it, and to distribute modified versions of the software, under the terms of the license."
+        %p{:style=>"padding-top:10px; padding-left:170px;"}= "S4 was initially released by Yahoo! Inc. in October 2010 and is an Apache Incubator project since September 2011. It is licensed under the Apache 2.0 license."
 
     .horrule
 
@@ -52,19 +52,19 @@ title: Distributed Stream Computing Platform
         %h4{:class=>"subsecheader"}= "cluster management"
         %p= "S4 hides all cluster management tasks using a communication layer built on top of  <a href='http://hadoop.apache.org/zookeeper'>ZooKeeper</a>, a distributed, open-source coordination service for distributed applications."
       #ov_6{:class=>"span-6 last"}
-        %h4{:class=>"subsecheader"}= "partial fault-tolerance"
-        %p= "When a server in the cluster fails, a stand-by server is automatically activated to take over the tasks. The state of the server may be lost but quickly recovered from new input data."
+        %h4{:class=>"subsecheader"}= "fault-tolerance"
+        %p= "When a server in the cluster fails, a stand-by server is automatically activated to take over the tasks. Checkpointing and recovery minimize state loss."
 
 #sidebar{:class=>"span-5 last"}
   #download
     #latest_head
-      %span= "alpha version"
+      %span= "S4 Piper release"
       %br
-      %span{:style=>"font-size: small;"}= "v0.3.0"
+      %span{:style=>"font-size: small;"}= "v0.5.0"
     #latest_link
-      %a{:href=>"http://docs.s4.io/tutorials/getting_started.html", :style=>"border: none;"}= "Get Started"
+      %a{:href=>"https://cwiki.apache.org/confluence/display/S4/S4+piper+walkthrough", :style=>"border: none;"}= "Get Started"
     #disclaimer
-      %p= "This is an alpha version and should not be used for production. There's no guarantee of backwards-compatibility until the 1.0 release."
+      %p= "This is an alpha version. There's no guarantee of backwards-compatibility until the 1.0 release."
   #participate
     %h2{:class=>"secheader"}= "participate"
     %ul{:class=>'large greybar'}

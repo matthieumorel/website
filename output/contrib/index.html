@@ -4,13 +4,13 @@
     <title>S4: Contribute</title>
     <meta content='text/html; charset=utf-8' http-equiv='Content-Type' />
     <meta content='A general-purpose distributed stream computing platform' name='description' />
-    <link href='/style/screen.css' media='screen' rel='stylesheet' type='text/css' />
-    <link href='/style/print.css' media='print' rel='stylesheet' type='text/css' />
+    <link href='../style/screen.css' media='screen' rel='stylesheet' type='text/css' />
+    <link href='../style/print.css' media='print' rel='stylesheet' type='text/css' />
     <!--[if lt IE 9]>
-      <link href='/style/ie.css' media='screen' rel='stylesheet' type='text/css' />
+      <link href='../style/ie.css' media='screen' rel='stylesheet' type='text/css' />
     <![endif]-->
-    <link href='/style/style.css' rel='stylesheet' type='text/css' />
-    <link href='/style/nav.css' rel='stylesheet' type='text/css' />
+    <link href='../style/style.css' rel='stylesheet' type='text/css' />
+    <link href='../style/nav.css' rel='stylesheet' type='text/css' />
     <script type='text/javascript'>
         var _gaq = _gaq || [];
         _gaq.push(['_setAccount', 'UA-19490961-1']);
@@ -27,29 +27,35 @@
     <div id='header'>
       <div class='container'>
         <div id='logo'>
-          <a href='/'>
-            <img src='/images/s4_test.png' />
+          <a href='../'>
+            <img src='../images/s4_test.png' />
           </a>
         </div>
         <div id='navbar'>
           <ul id='nav'>
             <li>
-              <a href='/'>home</a>
+              <a href='../'>home</a>
             </li>
             <li>
-              <a href='http://docs.s4.io'>docs</a>
+              <a href='https://cwiki.apache.org/confluence/display/S4/S4+Wiki'>docs</a>
             </li>
             <li>
-              <a href='http://github.com/s4' onClick="_gaq.push(['_trackEvent', 'External', 'GitHub', 'http://github.com/s4']);">code</a>
+              <a href='http://git-wip-us.apache.org/repos/asf?p=incubator-s4.git' onClick="_gaq.push(['_trackEvent', 'External', 'Apache Git', 'http://github.com/s4']);">code</a>
             </li>
             <li>
-              <a href='/contrib'>get involved</a>
+              <a href='http://people.apache.org/~mmorel/apache-s4-0.5.0-incubating-doc/javadoc/'>API</a>
+            </li>
+            <li>
+              <a href='.'>get involved</a>
             </li>
             <li>
               <a href='http://blog.s4.io'>blog</a>
             </li>
             <li>
-              <a href='/team'>team</a>
+              <a href='../team'>team</a>
+            </li>
+            <li>
+              <a href='../download'>download</a>
             </li>
           </ul>
         </div>
@@ -63,11 +69,19 @@
           <p>The project is maintain by volunteers and is open to anybody interested in contributing to the project. To contribute, you can write code, review code, report bugs, suggest ideas, propose design changes, write documentation, answer questions in the mailing list, and much more. The more you contribute the more you can make a difference.</p>
           <!-- version control -->
           <h2 class='secheader'>version control</h2>
-          <p>Get the source code on your local drive using SVN. Most development is done on the trunk:</p>
-          <p><span class='high'>svn checkout https://svn.apache.org/repos/asf/incubator/s4</span></p>
-          <p>To create an Eclipse project type <span class='high'>gradlew eclipse</span>. You can now import the project into Eclipse. To learn more, visit the <b><a href='http://www.gradle.org'>Gradle website</a></b>.</p>
-          <p>You may also want to develop against a specific release. To do so, use a <b><a href='https://svn.apache.org/repos/asf/incubator/s4/tags'>release branch</a></b> and find the release that you are interested in developing against. To checkout this release, run:</p>
-          <p><span class='high'>svn checkout https://svn.apache.org/repos/asf/incubator/s4/tags/release-X.Y.Z/ s4-X.Y.Z</span></p>
+          <p>S4 sources are available through <b>git</b>. Most development is done on the <i>piper</i> branch</p>
+          <p>See a summary <a href='https://git-wip-us.apache.org/repos/asf?p=incubator-s4.git;a=summary'>here.</a></p>
+          <!-- access to the repository -->
+          <h2 class='secheader'>access to the repository</h2>
+          <ul>
+            <li>as a committer: <pre>git clone https://user_name@git-wip-us.apache.org/repos/asf/incubator-s4.git</pre></li>
+            <li>as a user or contributor: <pre>git clone http://git-wip-us.apache.org/repos/asf/incubator-s4.git</pre> (though since June 2012, you may have to try with <b>https</b> :<pre>git clone https://git-wip-us.apache.org/repos/asf/incubator-s4.git</pre> , even though this is not reflected yet on the Apache git documentation).</li>
+          </ul>
+          <ul></ul>
+          <p>For more information, have a look there: <a href='https://git-wip-us.apache.org/'>https://git-wip-us.apache.org/</a></p>
+          <!-- eclipse project -->
+          <h2 class='secheader'>creating an eclipse project</h2>
+          <p>type: <pre>./gradlew eclipse</pre> You can now import the project into Eclipse. To learn more, visit the <b><a href='http://www.gradle.org'>Gradle website</a></b>.</p>
           <!-- submission guidelines -->
           <h2 class='secheader'>submission guidelines</h2>
           <p>Before you start, send a message to the S4 developer <b><a href='https://cwiki.apache.org/confluence/display/S4/S4+Apache+mailing+lists'>mailing list</a></b>, or file a bug report in <b><a href='https://issues.apache.org/jira/browse/S4'>Jira</a></b>. Describe your proposed changes and check that they fit in with what others are doing and have planned for the project.</p>
@@ -81,8 +95,8 @@
               <li>BETTER: <span class='high'>getCondensedLength()</span>: Number of characters in the string, excluding non alpha-numeric characters.</li>
             </ul>
             <li>Do not use @author tags.</li>
-            <li>Code should be formatted according to <b><a href='http://www.oracle.com/technetwork/java/codeconv-138413.html'>Java's conventions</a></b>.</li>
-            <li>Formatting:</li>
+            <li>Code should be written according to <b><a href='http://www.oracle.com/technetwork/java/codeconv-138413.html'>Java's conventions</a></b>.</li>
+            <li>Formatting: (from S4 0.5, see "automatic formatting" below)</li>
             <ul>
               <li>Indent four spaces per level, not two or six or eight, etc... four.</li>
               <li>No tabs for indentation, spaces only.</li>
@@ -98,6 +112,7 @@
             <li>preferences --> Java --> Code style --> Formatter , then import s4/config/eclipse/s4-eclipse-format.xml</li>
             <li>preferences --> Java --> Editor --> Save actions --> format source code,  format all lines</li>
           </ol>
+          <p>If you don't use Eclipse, you may still use Eclipse's code formatter in a <a href='http://www.peterfriese.de/formatting-your-code-using-the-eclipse-code-formatter/'>standalone mode.</a></p>
         </div>
         <div class='span-5 last' id='contrib_sidebar'>
           <div id='participate'>
@@ -116,7 +131,7 @@
     </div>
     <div id='footer'>
       <div class='container'>
-        <span class='copyright'>Apache S4 - Copyright 2011 The Apache Software Foundation</span>
+        <span class='copyright'>Apache S4 - Copyright 2012 The Apache Software Foundation</span>
       </div>
     </div>
   </body>

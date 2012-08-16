@@ -4,13 +4,13 @@
     <title>S4: Distributed Stream Computing Platform</title>
     <meta content='text/html; charset=utf-8' http-equiv='Content-Type' />
     <meta content='A general-purpose distributed stream computing platform' name='description' />
-    <link href='/style/screen.css' media='screen' rel='stylesheet' type='text/css' />
-    <link href='/style/print.css' media='print' rel='stylesheet' type='text/css' />
+    <link href='style/screen.css' media='screen' rel='stylesheet' type='text/css' />
+    <link href='style/print.css' media='print' rel='stylesheet' type='text/css' />
     <!--[if lt IE 9]>
-      <link href='/style/ie.css' media='screen' rel='stylesheet' type='text/css' />
+      <link href='style/ie.css' media='screen' rel='stylesheet' type='text/css' />
     <![endif]-->
-    <link href='/style/style.css' rel='stylesheet' type='text/css' />
-    <link href='/style/nav.css' rel='stylesheet' type='text/css' />
+    <link href='style/style.css' rel='stylesheet' type='text/css' />
+    <link href='style/nav.css' rel='stylesheet' type='text/css' />
     <script type='text/javascript'>
         var _gaq = _gaq || [];
         _gaq.push(['_setAccount', 'UA-19490961-1']);
@@ -27,29 +27,35 @@
     <div id='header'>
       <div class='container'>
         <div id='logo'>
-          <a href='/'>
-            <img src='/images/s4_test.png' />
+          <a href='./'>
+            <img src='images/s4_test.png' />
           </a>
         </div>
         <div id='navbar'>
           <ul id='nav'>
             <li>
-              <a href='/'>home</a>
+              <a href='./'>home</a>
             </li>
             <li>
-              <a href='http://docs.s4.io'>docs</a>
+              <a href='https://cwiki.apache.org/confluence/display/S4/S4+Wiki'>docs</a>
             </li>
             <li>
-              <a href='http://github.com/s4' onClick="_gaq.push(['_trackEvent', 'External', 'GitHub', 'http://github.com/s4']);">code</a>
+              <a href='http://git-wip-us.apache.org/repos/asf?p=incubator-s4.git' onClick="_gaq.push(['_trackEvent', 'External', 'Apache Git', 'http://github.com/s4']);">code</a>
             </li>
             <li>
-              <a href='/contrib'>get involved</a>
+              <a href='http://people.apache.org/~mmorel/apache-s4-0.5.0-incubating-doc/javadoc/'>API</a>
+            </li>
+            <li>
+              <a href='contrib'>get involved</a>
             </li>
             <li>
               <a href='http://blog.s4.io'>blog</a>
             </li>
             <li>
-              <a href='/team'>team</a>
+              <a href='team'>team</a>
+            </li>
+            <li>
+              <a href='download'>download</a>
             </li>
           </ul>
         </div>
@@ -60,14 +66,12 @@
         <div class='span-18 colborder' id='main'>
           <div class='span-18 last' id='about'>
             <div class='span-17 last' id='notice'>
-              <div class='span-11' id='notice_text'>S4 has been accepted into the <a style='font-weight: bold; color:maroon' href='http://incubator.apache.org/projects/s4.html'>Apache Incubator</a> program. Forums have moved to the <a href='https://cwiki.apache.org/confluence/display/S4/S4+Apache+mailing+lists'>Apache mailing list</a>.</div>
-              <div class='span-6 last' id='notice_image'>
-                <a href='http://incubator.apache.org/projects/s4.html'>
-                  <img src='http://incubator.apache.org/images/apache-incubator-logo.png' />
-                </a>
-              </div>
+              <div id='notice_text'>August 2012: <b>S4 0.5.0 has been released!</b> Get it <a href='download'>here</a>!.</div>
             </div>
-            <p class='large'>S4 is a <span class='high'>general-purpose</span>, <span class='high'>distributed</span>, <span class='high'>scalable</span>, partially <span class='high'>fault-tolerant</span>, <span class='high'>pluggable</span> platform that allows programmers to easily develop applications for processing continuous unbounded streams of data.</p>
+            <div class='span-17 last' id='notice'>
+              <div id='notice_text'>S4 0.5.0 "Piper" is a complete refactoring of the previous version of S4. It provides a clearer API and a more robust implementation. It features TCP based communications, state recovery, and a new set of tools. More information is available in an <a href='https://cwiki.apache.org/confluence/display/S4/S4+0.5.0+Overview'>overview</a> and you may also check the <a href='http://www.apache.org/dist/incubator/s4/s4-0.5.0-incubating/RELEASE_NOTES.html'>release notes</a>.</div>
+            </div>
+            <p class='large'>S4 is a <span class='high'>general-purpose</span>, <span class='high'>distributed</span>, <span class='high'>scalable</span>, <span class='high'>fault-tolerant</span>, <span class='high'>pluggable</span> platform that allows programmers to easily develop applications for processing continuous unbounded streams of data.</p>
             <div class='horrule'></div>
             <div class='span-9' id='sec_motivation'>
               <h2 class='secheader'>motivation</h2>
@@ -75,16 +79,16 @@
             </div>
             <div class='span-9 last' id='sec_implementation'>
               <h2 class='secheader'>implementation</h2>
-              <p>The core platform is written in <span class='high'>Java</span>. The drivers to read from and write to the platform can be implemented in any language making it possible to integrate with legacy data sources and systems.</p>
+              <p>The core platform is written in <span class='high'>Java</span>. The implementation is modular and pluggable, and S4 applications can be easily and dynamically combined for creating more sophisticated stream processing systems.</p>
             </div>
             <div class='horrule'></div>
             <div class='span-18 last' id='sec_osi'>
               <h2 class='secheader'>open source</h2>
               <div class='span-2' id='os_logo'>
-                <img height='88' src='images/osi.png' width='75' />
+                <img src='http://incubator.apache.org/images/apache-incubator-logo.png' />
               </div>
               <div class='span-14 last' id='os_desc'>
-                <p style='padding-top:10px; padding-left:10px;'>S4 was released by Yahoo! Inc. in October 2010 under the Open Source Apache 2.0 license, which allows the user of the software the freedom to use the software for any purpose, to distribute it, to modify it, and to distribute modified versions of the software, under the terms of the license.</p>
+                <p style='padding-top:10px; padding-left:170px;'>S4 was initially released by Yahoo! Inc. in October 2010 and is an Apache Incubator project since September 2011. It is licensed under the Apache 2.0 license.</p>
               </div>
             </div>
             <div class='horrule'></div>
@@ -111,8 +115,8 @@
                 <p>S4 hides all cluster management tasks using a communication layer built on top of  <a href='http://hadoop.apache.org/zookeeper'>ZooKeeper</a>, a distributed, open-source coordination service for distributed applications.</p>
               </div>
               <div class='span-6 last' id='ov_6'>
-                <h4 class='subsecheader'>partial fault-tolerance</h4>
-                <p>When a server in the cluster fails, a stand-by server is automatically activated to take over the tasks. The state of the server may be lost but quickly recovered from new input data.</p>
+                <h4 class='subsecheader'>fault-tolerance</h4>
+                <p>When a server in the cluster fails, a stand-by server is automatically activated to take over the tasks. Checkpointing and recovery minimize state loss.</p>
               </div>
             </div>
           </div>
@@ -120,21 +124,21 @@
         <div class='span-5 last' id='sidebar'>
           <div id='download'>
             <div id='latest_head'>
-              <span>alpha version</span>
+              <span>S4 Piper release</span>
               <br />
-              <span style='font-size: small;'>v0.3.0</span>
+              <span style='font-size: small;'>v0.5.0</span>
             </div>
             <div id='latest_link'>
-              <a href='http://docs.s4.io/tutorials/getting_started.html' style='border: none;'>Get Started</a>
+              <a href='https://cwiki.apache.org/confluence/display/S4/S4+piper+walkthrough' style='border: none;'>Get Started</a>
             </div>
             <div id='disclaimer'>
-              <p>This is an alpha version and should not be used for production. There's no guarantee of backwards-compatibility until the 1.0 release.</p>
+              <p>This is an alpha version. There's no guarantee of backwards-compatibility until the 1.0 release.</p>
             </div>
           </div>
           <div id='participate'>
             <h2 class='secheader'>participate</h2>
             <ul class='large greybar'>
-              <li><a href='/contrib'>Contribute</a></li>
+              <li><a href='contrib'>Contribute</a></li>
               <li>Join the <a href='https://cwiki.apache.org/confluence/display/S4/S4+Apache+mailing+lists' onClick="_gaq.push(['_trackEvent', 'External', 'Forum', 'Index - https://cwiki.apache.org/confluence/display/S4/S4+Apache+mailing+lists']);">forum</a></li>
             </ul>
           </div>
@@ -180,7 +184,7 @@
     </div>
     <div id='footer'>
       <div class='container'>
-        <span class='copyright'>Apache S4 - Copyright 2011 The Apache Software Foundation</span>
+        <span class='copyright'>Apache S4 - Copyright 2012 The Apache Software Foundation</span>
       </div>
     </div>
   </body>

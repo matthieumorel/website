@@ -125,6 +125,14 @@ span.high {
 	//color: green;
 }
 
+.titleheader {
+	font-size: 25px;
+	text-shadow: #fff 0px 1px 0;
+/*	color: #C17878; */
+	color: $sec_header; 
+	margin-bottom: 20px;
+}
+
 .secheader {
 	font-size: 20px;
 	text-shadow: #fff 0px 1px 0;
