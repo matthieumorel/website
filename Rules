@@ -22,6 +22,15 @@ compile '/images/*/' do
   # do nothing
 end
 
+compile '/doc/*' do
+  if item.binary?
+  # don’t filter binary items
+  else
+    filter :kramdown
+    layout 'default'
+  end
+end
+
 compile '*' do
   if item[:extension] == "haml"
     filter :haml

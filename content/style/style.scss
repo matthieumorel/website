@@ -7,12 +7,17 @@ $sec_header: #7E2217;
 $grad_start: #fafafa;
 $grad_end: #dfdfdf;
 $dark_bg: #dfdfdf;
+$font-color: #7E2217;
 
 body {
     font-family: 	"Lucida Grande";
     font-size:		90%;
     background-color: $bg_body;
     color: #333;	
+    pre { 
+    	background-color: $dark_bg;
+    	overflow: auto;
+    	 }
 }
 
 a {
@@ -126,23 +131,23 @@ span.high {
 }
 
 .titleheader {
-	font-size: 25px;
+	font-size: 30px;
 	text-shadow: #fff 0px 1px 0;
 /*	color: #C17878; */
 	color: $sec_header; 
 	margin-bottom: 20px;
 }
 
-.secheader {
-	font-size: 20px;
+.secheader,h1 {
+	font-size: 25px;
 	text-shadow: #fff 0px 1px 0;
 /*	color: #C17878; */
 	color: $sec_header; 
 	margin-top: 20px;
 }
 
-.subsecheader {
-	font-size: 14px;
+.subsecheader,h2 {
+	font-size: 20px;
 	text-shadow: #fff 0px 1px 0;
 /*	color: #C17878; */
 	color: $sec_header; 
@@ -152,6 +157,16 @@ span.high {
 .subsecheader a {
 	color: $sec_header; 
 }
+
+.subssubecheader,h3 {
+	font-size: 16px;
+	text-shadow: #fff 0px 1px 0;
+/*	color: #C17878; */
+	color: $sec_header; 
+	margin-top: 20px;
+}
+
+
 
 .horrule {
 	margin-top: 30px;
@@ -184,6 +199,8 @@ span.high {
  	margin: 0; 
 	color: $sec_header;
 }
+
+
 
 #latest_link {
 	background: #fefefe;
